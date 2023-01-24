@@ -1,7 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
   width: 20px;
 }
 
+:root {
+  --main: rgba(255, 251, 36, 1);
+}
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
@@ -47,9 +53,13 @@ body {
   background-size: cover;
   object-fit: cover;
 }
-
+nav {
+  display: flex;
+  justify-content: space-evenly;
+}
 #navbar-container ul li a {
   text-transform: capitalize;
+  transition: 0.3s;
 }
 
 #navbar-container ul li a:hover {
@@ -358,5 +368,23 @@ footer .social .f-icons i:hover {
   }
 
   100% {
+  }
+}
+
+@media (width <=900px) {
+  #navbar-container ul {
+    padding: 10px;
+  }
+  #navbar-container ul li {
+    padding: 0 15px;
+  }
+  #navbar-container ul li a:hover {
+    position: relative;
+    color: var(--main) !important;
+    transform: scale(1);
+  }
+  #navbar-container ul li a:hover:before {
+    content: "";
+    background: transparent;
   }
 }
