@@ -2,12 +2,14 @@ html {
   scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 15px;
+  background: white;
 }
 
 :root {
   --main: rgba(255, 251, 36, 1);
 }
+
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
 }
@@ -19,6 +21,7 @@ html {
 body {
   overflow-x: hidden;
   width: 100vw;
+  background: var(--main) !important;
 }
 
 .bi-search {
@@ -176,6 +179,10 @@ button.btn:hover {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+.btn a {
+  text-decoration: none;
+  color: black;
+}
 .section2 {
   position: relative;
   width: 100vw;
@@ -191,9 +198,13 @@ button.btn:hover {
   color: white;
   position: relative;
   z-index: 3;
-  /* width: 40%; */
 }
 
+.section2 h3 {
+  width: fit-content;
+  position: relative;
+  margin: 30px auto;
+}
 .section2 .sec2-content p {
   text-transform: lowercase;
 }
@@ -257,14 +268,22 @@ button.btn:hover {
   flex-direction: column;
   background-repeat: no-repeat;
   gap: 10px;
-  /* flex-grow:1 */
 }
 
 .album h3 {
   margin: 10px 0 15px 0;
-  /* flex-grow:2 */
+  position: relative;
 }
 
+.underline {
+  position: absolute;
+  display: inline-block;
+  top: 120%;
+  width: 40%;
+  left: 30%;
+  background-color: rgb(86, 81, 81);
+  height: 4px;
+}
 .album .main {
   margin: 5px 0;
 }
@@ -289,89 +308,58 @@ button.btn:hover {
 
 footer {
   background-image: url(images/Shape.png);
-  height: 70vh;
+
   width: 100vw;
   color: white;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  flex-direction: column; */
+  padding: 20px;
+  border-top-right-radius: 40%;
 }
 
 footer h2 {
-  width: 100vw;
-  height: 20vh;
+  height: fit-content;
+  padding: 10px;
   text-align: center;
-  padding: 8vh;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 footer h2 span {
   color: rgba(255, 251, 36, 1);
 }
 
-footer .mid-content {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-footer .mid-content div:nth-child(1) {
-  width: 30vw;
-}
-
-footer .mid-content div:nth-child(2),
-footer .mid-content div:nth-child(3),
-footer .mid-content div:nth-child(4) {
-  width: 15vw;
-}
-
-footer .mid-content div ul li {
-  list-style: none;
-}
-
 #footer-logo {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  height: 100%;
+  gap: 20px;
+  margin-left: 20px;
 }
 
 #footer-logo img {
-  margin-bottom: 20px;
-  width: 160px;
-  height: 70px;
+  width: 100px;
+
   background-size: cover;
   object-fit: cover;
 }
 
 #footer-logo p {
   text-align: justify;
-  width: 70%;
-  margin-left: 20px;
-  height: 40vh;
+
+  width: 100%;
 }
 
-footer .mid-content {
-  width: 80vw;
-  margin: 0 auto;
-}
-
-.footer-nav {
-  display: flex;
-  justify-content: start;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-.footer-nav h3 {
+.social h3 {
   text-transform: capitalize;
-  text-shadow: 2px 2px 5px black;
+  letter-spacing: 1px;
 }
 
-.footer-nav li {
-  padding-left: 10px;
+.social h3 span {
+  color: var(--main);
 }
-
-.footer-nav li:hover {
-  padding-left: 20px;
-  color: rgba(255, 251, 36, 1);
-}
-
 footer .social {
   margin-top: 20px;
   width: 100vw;
@@ -380,25 +368,15 @@ footer .social {
   flex-direction: column;
 }
 
-footer .social .f-icons i {
+.social #f-icons .icon {
   margin: 0 10px;
   font-size: 14px;
   transition: 0.9s;
 }
 
-footer .social .f-icons i:hover {
-  /* font-size: 20px; */
-  animation: animate-rotate 0.5s linear forwards;
-  color: rgba(255, 251, 36, 1);
+.social #f-icons .icon:hover {
+  color: var(--main);
   transform: rotate(360deg) scale(2);
-}
-
-@keyframes animate-rotate {
-  0% {
-  }
-
-  100% {
-  }
 }
 
 @media (width <=900px) {
@@ -412,6 +390,7 @@ footer .social .f-icons i:hover {
     position: relative;
     color: var(--main) !important;
     transform: scale(1);
+    padding-left: 20px;
   }
   #navbar-container ul li a:hover:before {
     content: "";

@@ -42,9 +42,8 @@
         <ul class="navbar-nav w-75 flex justify-content-end gap-3">
           <li class="nav-item"><a href="#img1" class="nav-link">home</a></li>
           <li class="nav-item"><a href="#album" class="nav-link">Gallery</a></li>
-          <li class="nav-item"><a href="" class="nav-link">services</a></li>
-          <li class="nav-item"><a href="" class="nav-link">about</a></li>
-          <li class="nav-item"><a href="" class="nav-link">contact</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">about</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">contact</a></li>
         </ul>
       </div>
     </nav>
@@ -57,14 +56,17 @@
           <h1>Creative Agency
             Portfolio</h1>
           <p>Elevate your visual identity with Inventive Minds Agency's expert design services and unique artistic vision</p>
-          <button class="btn ">read more</button>
+          <button class="btn "><a href="#album">go to gallery</a></button>
         </div>
 
       </div>
     </div>
     <div class="row section2 g-0 m-0 ">
       <div class="col-10 sec2-content text-center mx-auto mt-5">
-        <h3> Your Dream <span> We Design</span></h3>
+        <h3> Your Dream <span> We Design</span>
+      <span class="underline"></span>
+        
+        </h3>
         <p class="w-75 mx-auto">
           we believe that every client has unique needs and ideas, and it's our job to bring those ideas to life. We listen closely to our clients and work closely with them to understand their vision and goals. From there, we use our expertise in design and marketing to create a strategy that will help them achieve those goals. Our team is made up of talented designers, developers, and marketers who are passionate about creating beautiful, effective solutions for our clients. </p>
       </div>
@@ -90,7 +92,7 @@
 
         <p class="w-75 mx-auto">Conectetur Adipisicing Elit. Natus Eius Cumque Dolores Odio Consequatur Eligendi
           Voluptas.</p>
-        <button class="btn">read more</button>
+        <button class="btn"><a href="#about">contact us</a></button>
 
       </div>
 
@@ -98,7 +100,9 @@
   </div>
   </div>
   <div class="album " id="album">
-    <h3>Our Creative Work</h3>
+    <h3>Our Creative Work
+      <span class="underline"></span>
+    </h3>
     <div class="top">
       <img onclick="f1(this.src)" src="images/creative4.jpg" alt="">
       <img onclick="f1(this.src)" src="images/creative3 - Copy.jpg" alt="">
@@ -123,54 +127,28 @@
       <img onmousemove="mouseover(this.src)" src="images/creative7.jpg" alt="">
     </div>
   </div>
-  <footer>
+
+
+
+  <footer id="about">
     <h2>contact <span>us</span> </h2>
 
-    <div class="mid-content">
+    <div class="footer-content">
       <div id="footer-logo">
         <img src="images/Logo.png" alt="">
-        "Designing for the Future, Shaping the Present Creative Agency"      </div>
-      <div>
-        <ul class="footer-nav">
-          <h3>services</h3>
-          <li>home</li>
-          <li>home</li>
-          <li>home</li>
-          <li>home</li>
-          <li>home</li>
-        </ul>
-      </div>
-      <div>
-        <ul class="footer-nav">
-          <h3>pages</h3>
-          <li>home</li>
-          <li>home</li>
-          <li>home</li>
-          <li>home</li>
-          <li>home</li>
-        </ul>
-      </div>
-      <div>
-        <ul class="footer-nav">
-          <h3>pages</h3>
-          <li>home</li>
-          <li>home</li>
-          <li>home</li>
-          <li>home</li>
-          <li>home</li>
-        </ul>
-      </div>
-    </div>
+<p>we design to make an impact, create beautiful and effective solutions that drive results.
+    We stay on top of industry trends, and use the latest technology to make sure your project stands out. Trust us to help you achieve your business objectives and make a positive impact on your industry.</p>
+      
 
-    </div>
+
     <div class="social">
-      <h3>Follow Us</h3>
-      <div class="f-icons">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-instagram"></i>
+      <h3>Follow <span>Us</span></h3>
+      <div id="f-icons">
+        <i class="icon fa-brands fa-facebook-f"></i>
+        <i class="icon fa-brands fa-twitter"></i>
+        <i class="icon fa-brands fa-instagram"></i>
       </div>
-
+    </div>
   </footer>
 
   </div>
